@@ -1290,6 +1290,9 @@ public class GLFW {
 			public void mouseButton(long arg0, int arg1, boolean arg2) {
 				if ( GLCallbacks.mouseButtonCallbacks.containsKey(arg0) )
 					GLCallbacks.mouseButtonCallbacks.get(arg0).invoke(arg0, arg1, arg2 ? GLFW.GLFW_PRESS : GLFW.GLFW_RELEASE, 0);
+				
+				if ( GLCallbacks.touchCallbacks.containsKey(arg0) )
+					GLCallbacks.touchCallbacks.get(arg0).invoke(arg0, arg1, 0, 0, 0);
 			}
 
 			@Override

@@ -27,4 +27,8 @@ public class GLFM extends Glfm {
 	public static GLFMRenderFuncCallbackI glfmSetRenderFuncCallback(long window, GLFMRenderFuncCallbackI callback) {
 		return GLCallbacks.renderFuncCallbacks.put(window, callback);
 	}
+	
+	public static GLFMTouchCallbackI glfmSetTouchCallback(long window, GLFMTouchCallbackI callback) {
+		return GLCallbacks.touchCallbacks.put(window, callback);
+	}
 }
