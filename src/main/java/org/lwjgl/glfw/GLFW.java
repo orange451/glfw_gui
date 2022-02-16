@@ -862,6 +862,10 @@ public class GLFW {
     public static long glfwCreateWindow(int width, int height, byte[] title, long monitor, long share) {
     	return Glfw.glfwCreateWindow(width, height, title, monitor, share);
     }
+	
+    public static long glfwCreateWindow(int width, int height, CharSequence title, long monitor, long share) {
+        return GLFW.glfwCreateWindow(width, height, Gutil.toUtf8(title.toString()), monitor, share);
+    }
 
     public static void glfwSetWindowShouldClose(long window, int value) {
     	Glfw.glfwSetWindowShouldClose(window, value);
@@ -1044,10 +1048,6 @@ public class GLFW {
 	
 	public static void glfwSetWindowPos(long windowId, int x, int y) {
 		Glfw.glfwSetWindowPos(windowId, x, y);
-	}
-	
-	public static long glfwCreateWindow(int width, int height, String title, long unknown, long unknown2) {
-		return Glfw.glfwCreateWindow(width, height, Gutil.toUtf8(title), unknown, unknown2);
 	}
 	
 	public static void glfwSetWindowIcon(long windowId, org.lwjgl.glfw.GLFWImage.Buffer buffer) {

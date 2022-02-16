@@ -1,5 +1,6 @@
 package org.lwjgl.glfm;
 
+import org.lwjgl.glfw.GLFW;
 import org.lwjgl.glfw.GLFWCharCallbackI;
 import org.lwjgl.glfw.GLFWKeyCallbackI;
 import org.mini.gl.GLCallbacks;
@@ -31,4 +32,8 @@ public class GLFM extends Glfm {
 	public static GLFMTouchCallbackI glfmSetTouchCallback(long window, GLFMTouchCallbackI callback) {
 		return GLCallbacks.touchCallbacks.put(window, callback);
 	}
+	
+    public static long glfwCreateWindow(int width, int height, CharSequence title, long monitor, long share) {
+        return GLFW.glfwCreateWindow(width, height, title.toString(), monitor, share);
+    }
 }
