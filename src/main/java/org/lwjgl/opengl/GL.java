@@ -10,8 +10,8 @@ public class GL {
 		return new GLCapabilities();
 	}
 
-	public static void createCapabilities() {
-		//
+	public static GLCapabilities createCapabilities() {
+		return new GLCapabilities();
 	}
 
 	public static void setCapabilities(GLCapabilities object) {
