@@ -78,7 +78,7 @@ public class GL20 extends GL11 {
 		glUniform4fv(location, data.length, data, 0);
 	}
 	
-	public static void glVertexAttribPointer(int index, int len, int type, boolean normalized, int size, int offset) {
-		glVertexAttribPointer(index, len, type, normalized?GL_TRUE:GL_FALSE, size, null, offset);
+	public static void glVertexAttribPointer(int index, int len, int type, boolean normalized, int size, long offset) {
+		glVertexAttribPointer(index, len, type, normalized?GL_TRUE:GL_FALSE, size, null, (int)offset);
 	}
 }
