@@ -6,7 +6,6 @@
 package org.mini.glfm;
 
 import org.mini.glfw.Glfw;
-import org.mini.gui.GCallBack;
 
 /**
  * @author gust
@@ -138,8 +137,8 @@ public class Glfm {
 
     }
 
-    public static void glfmSetCallBack(long display, GCallBack app) {
-
+    public static void glfmSetCallBack(long display, GlfmCallBack app) {
+    	//
     }
 
     public static String glfmGetSaveRoot() {

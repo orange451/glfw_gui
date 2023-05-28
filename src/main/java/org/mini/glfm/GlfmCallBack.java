@@ -1,12 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package org.mini.glfm;
 
 /**
- *
+ * callback
  * @author gust
  */
 public interface GlfmCallBack {
@@ -41,5 +36,7 @@ public interface GlfmCallBack {
     public void onPhotoPicked(long display, int uid, String url, byte[] data);
 
     public void onNotify(long display, String key, String val);
+
+    public void onOrientationChanged(long display, int orientation);
 
 }

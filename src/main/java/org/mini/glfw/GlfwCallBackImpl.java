@@ -317,4 +317,9 @@ public class GlfwCallBackImpl extends GCallBack {
     public String getAppResRoot() {
         return new File("./").getAbsolutePath();
     }
+
+	@Override
+	public void onOrientationChanged(long display, int orientation) {
+		//
+	}
 }
